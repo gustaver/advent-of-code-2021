@@ -1,6 +1,6 @@
 (ns core
-  (:require [solutions.one :refer [solve]]))
+  (:require [solutions.two :refer [solve]]))
 
 (defn -main [_]
-  (let [input (slurp "inputs/01.in")]
+  (let [input (slurp "inputs/02.in")]
     (println (solve input))))
