@@ -8,6 +8,9 @@
 (defn split-whitespace [s]
   (str/split s #"\s+"))
 
+(defn split-comma [s]
+  (str/split s #","))
+
 (defn all=?
   "Returns true/false if all elements in a collection are equal"
   {:test (fn []
@@ -31,3 +34,10 @@
            (is= 2 (find-first even? [1 2 3 4])))}
   [pred coll]
   (first (filter pred coll)))
+
+(defn count-cond
+  "Returns the number of elements in a collection which satisfy the predicate"
+  {:test (fn []
+           (is= 2 (count-cond even? [1 2 3 4])))}
+  [pred coll]
+  (count (filter pred coll)))
